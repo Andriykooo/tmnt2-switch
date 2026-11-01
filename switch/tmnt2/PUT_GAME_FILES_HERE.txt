@@ -1,0 +1,20 @@
+TMNT 2: Battle Nexus - Switch port
+
+Copy the whole "switch" folder to the root of your SD card, then copy these
+6 files from YOUR OWN PC copy of the game into this folder (sdmc:/switch/tmnt2/):
+
+  TMNT.DAT
+  TMNTE.DAT
+  WaveData.bin
+  SeData.bin
+  TrSeData.bin
+  (optional) voice0.bin ... voice3.bin, strbgm.vas  - voices and music, if your copy has them
+
+TMNT2V00.DAT ... TMNT2V05.DAT here are empty placeholders for the cutscene movies.
+If your copy has the real ones (several MB each), use those instead.
+
+The game files are not included: they are Konami's copyrighted data.
+
+Launch from the Homebrew Menu opened with title override
+(hold R while starting any game) so the port gets full RAM.
+Saves go to sdmc:/switch/tmnt2/ifs/, the log to sdmc:/switch/tmnt2/log.txt.

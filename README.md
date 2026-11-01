@@ -52,10 +52,12 @@ Steps:
 
 ## Installing
 
-Copy everything to `sdmc:/switch/tmnt2/`:
-- `tmnt2.nro`
-- from the PC game: `TMNT.DAT`, `TMNTE.DAT`, `TMNT2V00–05.DAT`, `WaveData.bin`, `SeData.bin`, `TrSeData.bin`
-- `Common/Fonts/MainFont.met` and `Common/Touch/Touch.lpac`, from the web build's `index.data`
+The `switch/` folder in this repo is ready to copy to the root of your SD card. It contains:
+- the built `tmnt2.nro`
+- the fonts and touch data from the web build
+- placeholders for the cutscene movies
+
+Then add the game data from **your own** PC copy of the game to `sdmc:/switch/tmnt2/`: `TMNT.DAT`, `TMNTE.DAT`, `WaveData.bin`, `SeData.bin` and `TrSeData.bin`. See `switch/tmnt2/PUT_GAME_FILES_HERE.txt`. The game data is not included and never will be.
 
 Launch it through title override (hold **R** while starting a game) so it gets full RAM.
 

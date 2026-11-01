@@ -20,5 +20,7 @@
 *.o
 *.log
 *.nro
+# ...except the ready-to-copy SD-card folder
+!/switch/tmnt2/tmnt2.nro
 *.nacp
 *.elf
