@@ -205,6 +205,9 @@ static int check_assets(void) {
 }
 
 int main(int argc, char** argv) {
+  // Keep the previous run's log: after a crash people tend to relaunch before sending it.
+  remove(GAME_DIR "/log_prev.txt");
+  rename(GAME_DIR "/log.txt", GAME_DIR "/log_prev.txt");
   freopen(GAME_DIR "/log.txt", "w", stderr);
   setvbuf(stderr, NULL, _IONBF, 0);
 

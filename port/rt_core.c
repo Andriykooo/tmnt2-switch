@@ -424,7 +424,8 @@ void w2c_a_ub(struct w2c_a* env) {
   RT_LOG("[abort]\n");
   abort();
 }
-// db: emscripten_resize_heap - the web build has a fixed heap, so growth always fails
+// db: emscripten_resize_heap - the module declares memory as 1024 pages min = max (64 MB),
+// so it was built without ALLOW_MEMORY_GROWTH and growth always fails
 u32 w2c_a_db(struct w2c_a* env, u32 size) {
   RT_LOG("[heap] resize to %u refused\n", size);
   return 0;
