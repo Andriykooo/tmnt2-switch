@@ -2,6 +2,7 @@
 #include <math.h>
 #include <setjmp.h>
 #include <stdlib.h>
+#include <strings.h>
 #include <time.h>
 
 #include "rt.h"
@@ -211,6 +212,54 @@ static void rt_workerfs_path(const char* wasm_path, char* out, size_t out_size) 
   snprintf(out, out_size, "%s/%s", rt_asset_dir(), name ? name + 1 : wasm_path);
 }
 
+// Many copies of the game lack the streamed voice/music files (voice0-3.bin, strbgm.vas).
+// A missing file makes the stream code read its 2 KB wave header from uninitialised
+// memory (SdStrAL.cpp: SdStrReadHeadWait) and then divide by its fields, which traps.
+// Instead they are served as virtual files: every 2 KB header read gets a valid silent
+// PCM header, every other read gets zeros, so clips keep their length and play silence.
+#define RT_SD_SCT_SIZE 0x800
+#define RT_SILENT_STREAM_SIZE 0x7FFF0000u
+
+static int rt_is_stream_file(const char* wasm_path) {
+  const char* name = strrchr(wasm_path, '/');
+  name = name ? name + 1 : wasm_path;
+  return strcasecmp(name, "strbgm.vas") == 0 ||
+         (strncasecmp(name, "voice", 5) == 0 && strcasecmp(name + 6, ".bin") == 0);
+}
+
+static void rt_serve_silent_stream(const rt_async_op* op, const char* host) {
+  static char logged[8][32];
+  const char* name = strrchr(host, '/') ? strrchr(host, '/') + 1 : host;
+  for (int i = 0; i < 8; i++) {
+    if (!strcmp(logged[i], name)) break;
+    if (!logged[i][0]) {
+      snprintf(logged[i], sizeof logged[i], "%s", name);
+      RT_LOG("[wfs] missing %s, serving silence\n", host);
+      break;
+    }
+  }
+
+  if (op->size_only) {
+    rt_onWorkerFSDataReady(0, RT_SILENT_STREAM_SIZE, op->opid, op->param);
+    return;
+  }
+  uint32_t size = op->size;
+  uint32_t buf = size ? rt_malloc(size) : 0;
+  if (size && !buf) {
+    RT_LOG("[wfs] malloc(%u) failed\n", size);
+    return;
+  }
+  if (size) memset(RT_PTR(buf), 0, size);
+  if (size == RT_SD_SCT_SIZE) {
+    // SdWaveDataHdr_t: Format Channels BlockAlign SamplesPerSec LoopPoint EndPoint
+    //                  Volume PlayPoint Page Size
+    static const int32_t hdr[10] = {1, 1, 2, 22050, 0, 0, 0, 0, 0, 0};
+    memcpy(RT_PTR(buf), hdr, sizeof hdr);
+  }
+  rt_onWorkerFSDataReady(buf, size, op->opid, op->param);
+  if (buf) rt_free(buf);
+}
+
 static void rt_async_run(const rt_async_op* op) {
   switch (op->kind) {
     case RT_ASYNC_READY:
@@ -226,6 +275,10 @@ static void rt_async_run(const rt_async_op* op) {
   char host[512];
   rt_workerfs_path(op->path, host, sizeof host);
   FILE* f = fopen(host, "rb");
+  if (!f && rt_is_stream_file(op->path)) {
+    rt_serve_silent_stream(op, host);
+    return;
+  }
   if (!f) {
     RT_LOG("[wfs] missing %s\n", host);
     rt_onWorkerFSDataReady(0, 0, op->opid, op->param);
