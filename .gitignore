@@ -1,0 +1,24 @@
+# Game data and anything derived from it never goes into the repo.
+/data/
+/sdcard/
+/wasm/
+/gen/
+/build/
+/fromswitch/
+
+# Downloaded toolchains and installers
+/tools/wabt-1.0.42/
+/tools/inc/
+/tools/simde-src/
+/tools/*.tar.gz
+/tools/*.7z
+/tools/*.exe
+/tools/*.ini
+
+# Local outputs
+*.exe
+*.o
+*.log
+*.nro
+*.nacp
+*.elf

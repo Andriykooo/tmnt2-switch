@@ -1,0 +1,285 @@
+a.La	La	function(a){a=navigator.getGamepads()[a];if(0<a.id.indexOf("Product: ")){let b=a.id.indexOf("Product: ")+9;return parseInt(a.id.substr(b,4),16)}a=a.id.split("-"); return 1<a.length&&!isNaN(parseInt(a[1],16))?parseInt(a[1],16):0}
+a.Ma	Ma	function(a){a=navigator.getGamepads()[a];if(0<a.id.indexOf("Vendor: ")){let b=a.id.indexOf("Vendor: ")+8;return parseInt(a.id.substr(b,4),16)}a=a.id.split("-");return 1<a.length&&!isNaN(parseInt(a[0],16))?parseInt(a[0],16):0}
+a.Ka	Ka	function(a){return 0<=navigator.getGamepads()[a].id.toLowerCase().indexOf("xinput")}
+a.Ca	Ca	function(){"undefined"!==typeof Gc&&Gc.$h&&Gc.$h.ig&&Gc.$h.ig.resume()}
+a.$a	$a	(a,b)=>dynCall_vi(a,b)
+a.da	da	function(a,b,c){Ga= c;try{var d=tb(a);switch(b){case 0:var e=Ha();if(0>e)break;for(;z.streams[e];)e++;return vb(d,e).fd;case 1:case 2:return 0;case 3:return d.flags;case 4:return e=Ha(),d.flags|=e,0;case 12:return e=Ha(),q[e+0>>1]=2,0;case 13:case 14:return 0}return-28}catch(f){if("undefined"==typeof z||"ErrnoError"!==f.name)throw f;return-f.sf}}
+a.qb	qb	function(a){try{return tb(a),0}catch(b){if("undefined"==typeof z||"ErrnoError"!==b.name)throw b;return-b.sf}}
+a.lb	lb	function(a,b){try{var c=tb(a),d=c.node,e=c.ff.Ef;a=e?c:d; e??=d.df.Ef;eb(e,63);var f=e(a);return Hb(b,f)}catch(g){if("undefined"==typeof z||"ErrnoError"!==g.name)throw g;return-g.sf}}
+a.hb	hb	function(a,b){try{if(0===b)return-28;var c=z.Eg(),d=Ta(c)+1;if(b<d)return-68;I(c,n,a,b);return d}catch(e){if("undefined"==typeof z||"ErrnoError"!==e.name)throw e;return-e.sf}}
+a.ob	ob	function(a,b,c){Ga=c;try{var d=tb(a);switch(b){case 21509:return d.mf?0:-59;case 21505:if(!d.mf)return-59;if(d.mf.Wf.Zi){a=[3,28,127,21,4,0,1,0,17,19,26,0,18,15,23,22,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0];var e=Ha();u[e>>2]=25856;u[e+4>>2]=5;u[e+8>>2]=191;u[e+12>>2]=35387;for(var f=0;32>f;f++)m[e+f+17]=a[f]||0}return 0;case 21510:case 21511:case 21512:return d.mf?0:-59;case 21506:case 21507:case 21508
+a.jb	jb	function(a,b){try{return a=a?D(n,a):"",Hb(b,z.stat(a,!0))}catch(c){if("undefined"==typeof z||"ErrnoError"!==c.name)throw c;return-c.sf}}
+a.ib	ib	function(a,b,c,d){try{b=b?D(n,b):"";var e=d&256;b=Gb(a,b,d&4096);return Hb(c,e?z.stat(b,!0):z.stat(b))}catch(f){if("undefined"==typeof z||"ErrnoError"!==f.name)throw f;return-f.sf}}
+a.pb	pb	function(a,b,c,d){Ga=d;try{b=b?D(n,b):"";b=Gb(a,b);var e=d?Ha():0;return z.open(b,c,e).fd}catch(f){if("undefined"==typeof z||"ErrnoError"!==f.name)throw f;return-f.sf}}
+a.kb	kb	function(a,b){try{return a=a?D(n,a):"",Hb(b,z.stat(a))}catch(c){if("undefined"==typeof z||"ErrnoError"!==c.name)throw c;return-c.sf}}
+a.ub	ub	()=>y("")
+a.sb	sb	(a,b)=>{b=b?D(n,b):"";if(a&24){var c=b=b.replace(/\s+$/,"");b=0<b.length?"\n":"";var d=Error().stack.toString(),e=d.split("\n");d="";var f=RegExp("\\s*(.*?)@(.*?):([0-9]+):([0-9]+)"), g=RegExp("\\s*at (.*?) \\((.*):(.*):(.*)\\)"),h;for(h of e){var l=g.exec(h);if(5==l?.length){e=l[1];var p=l[2];var t=l[3];l=l[4]}else if(l=f.exec(h),4<=l?.length)e=l[1],p=l[2],t=l[3],l=l[4]|0;else{d+=h+"\n";continue}
+a.bb	bb	()=>{Fa=!1;Ib=0}
+a.Za	Za	()=>{throw Infinity;}
+a.eb	eb	function(a,b){a=-9007199254740992>a||9007199254740992<a?NaN:Number(a);a=new Date(1E3*a);u[b>>2]=a.getSeconds();u[b+4>>2]=a.getMinutes();u[b+8>>2]=a.getHours();u[b+12>>2]=a.getDate();u[b+16>>2]=a.getMonth();u[b+20>>2]=a.getFullYear()-1900;u[b+24>>2]=a.getDay();var c=a.getFullYear();u[b+28>>2]=(0!==c%4||0===c%100&&0!==c%400?Kb:Jb)[a.getMonth()]+a.getDate()-1|0;u[b+36>>2]=-(60*a.getTimezoneOffset());
+a.cb	cb	(a,b)=>{Lb[a]&&(clearTimeout(Lb[a].id),delete Lb[a]);if(!b)return 0;var c=setTimeout(()=>{delete Lb[a];Pb(()=>If(a,performance.now()))},b);Lb[a]={id:c,lk:b};return 0}
+a.fb	fb	(a,b,c,d)=>{var e=(new Date).getFullYear(),f=(new Date(e,0,1)).getTimezoneOffset();e=(new Date(e,6,1)).getTimezoneOffset();w[a>>2]=60*Math.max(f,e);u[b>>2]=Number(f!=e);b=g=>{var h=Math.abs(g); return`UTC${0<=g?"-":"+"}${String(Math.floor(h/60)).padStart(2,"0")}${String(h%60).padStart(2,"0")}`};a=b(f);b=b(e);e<f?(I(a,n,c,17),I(b,n,d,17)):(I(a,n,d,17),I(b,n,c,17))}
+a.t	t	(a,b,c,d,e)=>{if(Q)if(a=nc[a])if(0>=e)Q.ef=40963;else{var f=null;try{switch(b){case 4352:if(0<d){f=Q.Bf.createBuffer(1,d,e);for(var g=f.getChannelData(0),h=0;h<d;++h)g[h]=.0078125*n[c++]-1}a.Cf=1;a.channels=1;a.length=d;break;case 4353:if(0<d)for(f=Q.Bf.createBuffer(1,d>>1,e),g=f.getChannelData(0),c>>=1,h=0;h<d>>1;++h)g[h]=3.0517578125E-5* q[c++];a.Cf=2;a.channels=1;a.length=d>>1;break;case 4354:i
+a.fa	fa	(a,b)=>{if(Q){for(var c=0;c<a;++c){var d=u[b+4*c>>2];if(0!==d){if(!nc[d]){Q.ef=40961;return}if(nc[d].qg){Q.ef=40964;return}}}for(c= 0;c<a;++c)d=u[b+4*c>>2],0!==d&&(lc[nc[d].deviceId]--,delete nc[d],qc.push(d))}}
+a.ga	ga	(a,b)=>{if(Q){for(var c=0;c<a;++c){var d=u[b+4*c>>2];if(!Q.sources[d]){Q.ef=40961;return}}for(c=0;c<a;++c)d=u[b+4*c>>2],tc(Q.sources[d],4116),Hc(d,4105,0),delete Q.sources[d],qc.push(d)}}
+a.J	J	(a,b)=>{if(Q)for(var c=0;c<a;++c){var d={deviceId:Q.deviceId,id:0<qc.length?qc.pop():pc++,qg:0,jf:null,frequency:0,Cf:2,channels:1,length:0};lc[d.deviceId]++;nc[d.id]=d;u[b+4*c>>2]=d.id}}
+a.K	K	(a,b)=>{if(Q)for(var c=0;c<a;++c){var d= Q.Bf.createGain();d.connect(Q.gain);d={context:Q,id:0<qc.length?qc.pop():pc++,type:4144,state:4113,cf:[nc[0]],pf:[],Ff:!1,pitch:1,Fg:1,gain:d,Fh:0,Ch:1,nf:null,kf:0,wf:Number.NEGATIVE_INFINITY,tf:0,gh:!1,refDistance:1,maxDistance:3.40282E38,rolloffFactor:1,position:[0,0,0],Of:[0,0,0],direction:[0,0,0],coneOuterGain:0,coneInnerAngle:360,coneOuterAngle:360,di
+a.E	E	(a,b,c)=>{a=Ec(a,b);if(null!==a)if(c)switch(b){case 4097:case 4098:case 4099:case 4106:case 4109:case 4110:case 4128:case 4129:case 4130:case 4131:case 4132:case 4133:case 4134:case 8203:x[c>> 2]=a;break;default:Q.ef=40962}else Q.ef=40963}
+a.m	m	(a,b,c)=>{a=Ec(a,b);if(null!==a)if(c)switch(b){case 514:case 4097:case 4098:case 4103:case 4105:case 4112:case 4117:case 4118:case 4128:case 4129:case 4131:case 4132:case 4133:case 4134:case 4135:case 4628:case 8201:case 8202:case 53248:u[c>>2]=a;break;default:Q.ef=40962}else Q.ef=40963}
+a.L	L	(a,b,c,d,e)=>{switch(b){case 4100:case 4101:case 4102:oc[0]=c;oc[1]=d;oc[2]=e;Fc(a,b,oc);break;default:Fc(a,b,null)}}
+a.D	D	a=>{Q&&((a=Q.sources[a])?tc(a,4115):Q.ef= 40961)}
+a.r	r	a=>{Q&&((a=Q.sources[a])?tc(a,4114):Q.ef=40961)}
+a.H	H	(a,b,c)=>{if(Q)if(a=Q.sources[a],!a)Q.ef=40961;else if(4136===a.type)Q.ef=40964;else if(0!==b){var d=nc[0];for(f of a.cf)if(0!==f.id){d=f;break}for(var e=0;e<b;++e){var f=u[c+4*e>>2];f=nc[f];if(!f){Q.ef=40961;return}0===d.id||f.frequency===d.frequency&&f.Cf===d.Cf&&f.channels===d.channels||(Q.ef=40964)}1===a.cf.length&&0===a.cf[0].id&&(a.cf.length=0);a.type=4137;for(e=0;e<b;++e)f=u[c+4*e>>2],f=nc[
+a.u	u	a=>{Q&&((a=Q.sources[a])?tc(a,4116):Q.ef=40961)}
+a.I	I	(a,b,c)=>{if(Q)if(a=Q.sources[a],!a)Q.ef=40961;else if(b>(1===a.cf.length&&0===a.cf[0].id?0:a.kf))Q.ef=40963;else if(0!==b){for(var d=0;d<b;d++){var e=a.cf.shift();e.qg--;u[c+4*d>>2]=e.id;a.kf--}0===a.cf.length&&a.cf.push(nc[0]);zc(a);sc(a)}}
+a.h	h	(a,b,c)=>{switch(b){case 4097:case 4098:case 4099:case 4106:case 4109:case 4110:case 4128:case 4129:case 4130:case 4131:case 4132:case 4133:case 4134:case 8203:Fc(a,b,c);break;default:Fc(a,b,null)}}
+a.p	Hc	(a,b,c)=>{switch(b){case 514:case 4097:case 4098:case 4103:case 4105:case 4128:case 4129:case 4131:case 4132:case 4133:case 4134:case 4628:case 8201:case 8202:case 53248:Fc(a, b,c);break;default:Fc(a,b,null)}}
+a.Kd	Kd	a=>{if(!(a in lc)||0<lc[a])return 0;delete lc[a];qc.push(a);return 1}
+a.oe	oe	(a,b)=>{if(!(a in lc))return 0;var c=null,d=[],e=null;if(b>>=2)for(var f=0,g=0;;){f=u[b++];d.push(f);if(0===f)break;g=u[b++];d.push(g);switch(f){case 4103:c||={};c.sampleRate=g;break;case 4112:case 4113:break;case 6546:switch(g){case 0:e=!1;break;case 1:e=!0;break;case 2:break;default:return 0}break;case 6550:if(0!==g)return 0;break;default:return 0}}f=window.AudioContext||window.webkitAudioContex
+a.Vd	Vd	a=>{var b=mc[a];Q!==b&&(mc[a].interval&&clearInterval(mc[a].interval),lc[b.deviceId]--,delete mc[a],qc.push(a))}
+a.n	n	a=>{0===a?Q=null:Q=mc[a];return 1}
+a.ra	ra	a=>a&&"Emscripten OpenAL"!==(a?D(n,a):"")?0:globalThis.AudioContext||globalThis.webkitAudioContext?(a=0<qc.length?qc.pop():pc++,lc[a]=0,a):0
+a.tb	tb	function(a,b,c){if(!(0<=a&&3>=a))return 28;qa[c>>3]=BigInt(Math.round(1E6* (0===a?Date.now():performance.now())));return 0}
+a.Ua	Ua	a=>12448==a?1:0
+a.Ta	Ta	(a,b,c,d,e)=>{if(62E3!=a)c=0;else{if(b)for(;;){a=u[b>>2];if(12321==a)S.alpha=0<u[b+4>>2];else if(12325==a)S.depth=0<u[b+4>>2];else if(12326==a)S.stencil=0<u[b+4>>2];else if(12337==a)a=u[b+4>>2],S.antialias=0<a;else if(12338==a)a=u[b+4>>2],S.antialias=1==a;else if(12544==a)S.Zj=12547!=u[b+4>>2];else if(12344==a)break;b+=8}c&&d||e?(e&&(u[e>>2]=1),c&&0<d&&(w[c>>2]=62002),c=1):c=0}return c}
+a.Ra	Ra	(a,b,c,d)=>{if(62E3!=a)return 0;for(a= 1;;){b=u[d>>2];if(12440==b)a=u[d+4>>2];else if(12344==b)break;else return 0;d+=8}if(2!=a)return 0;S.mi=a-1;S.gj=0;Uc=sd(Module.canvas,S);return 0!=Uc?(td(Uc),Mc.forEach(e=>e()),td(null),62004):0}
+a.Sa	Sa	(a,b)=>62E3!=a||62002!=b?0:62006
+a.ba	ba	(a,b)=>{if(62E3!=a||62004!=b)return 0;ud(Uc);Rc==b&&(Rc=0);return 1}
+a.aa	aa	(a,b)=>{if(62E3!=a)return 0;if(62006!=b)return 1;Sc==b&&(Sc=0);Tc==b&&(Tc=0);return 1}
+a.e	e	(a,b,c,d)=>{if(62E3!=a||62002!=b||!d)return 0;switch(c){case 12320:return u[d>>2]=S.alpha?32:24,1;case 12321:return u[d>> 2]=S.alpha?8:0,1;case 12322:return u[d>>2]=8,1;case 12323:return u[d>>2]=8,1;case 12324:return u[d>>2]=8,1;case 12325:return u[d>>2]=S.depth?24:0,1;case 12326:return u[d>>2]=S.stencil?8:0,1;case 12327:return u[d>>2]=12344,1;case 12328:return u[d>>2]=62002,1;case 12329:return u[
+a.k	k	()=>Rc
+a.l	l	a=>12378==a?Sc:12377==a?Tc:0
+a.Wa	Wa	a=>0!=a&&1!=a?0:62E3
+a.Va	Va	(a, b,c)=>{if(62E3!=a)return 0;b&&(u[b>>2]=1);c&&(u[c>>2]=4);Qc=!0;return 1}
+a.i	i	(a,b,c,d)=>{if(62E3!=a||0!=d&&62004!=d||0!=c&&62006!=c||0!=b&&62006!=b)return 0;td(d?Uc:null);Rc=d;Tc=b;Sc=c;return 1}
+a.Qa	Qa	()=>Qc&&T&&!T.isContextLost()?1:0
+a.Xa	Xa	a=>{if(62E3!=a)return 0;Tc=Sc=Rc=0;Qc=!1;return 1}
+a.W	yd	(a,b,c)=>{b=wd(b,c);return xd[a](...b)}
+a.d	d	(a,b,c)=>{b=wd(b,c);return xd[a](...b)}
+a.c	yd	(a,b,c)=>{b=wd(b,c);return xd[a](...b)}
+a.Fa	Fa	(a,b,c)=>{b=wd(b,c);return xd[a](...b)}
+a.rb	rb	()=>Date.now()
+a.ya	ya	()=>{if(!X.fullscreenEnabled())return-1;Bd(Wd);var a=Hd[1];if(a.exitFullscreen)a.fullscreenElement&& a.exitFullscreen();else if(a.webkitExitFullscreen)a.webkitFullscreenElement&&a.webkitExitFullscreen();else return-1;return 0}
+a.Ea	Ea	()=>{Bd(Xd);if(!document.exitPointerLock)return-1;document.exitPointerLock();return 0}
+a.va	va	function(a){if(Fe.has(a)){var b=Fe.get(a),c=Fe;c.sg[a]=void 0;c.hf.push(a);0<b.readyState&&4>b.readyState&&b.abort()}}
+a.Ya	Ya	a=>{Fa=!1;Ib=0;na=a;Nb(a)}
+a.B	Jd	(a,b,c)=>{a=Id(a);if(!a)return-4;u[b>>2]=a.width;u[c>>2]=a.height}
+a.w	w	()=>devicePixelRatio
+a.o	o	(a,b,c)=>{a=Id(a);if(!a)return-4;a=Vd(a);pa[b>>3]=a.width;pa[c>>3]=a.height;return 0}
+a.Aa	Aa	a=>{if(!X.fullscreenEnabled())return-1; Yd(a);return 0}
+a._	_	(a,b)=>{if(0>a||a>=X.ah.length)return-5;if(!X.ah[a])return-7;Zd(b,X.ah[a]);return 0}
+a.Ia	Ia	(a,b)=>{a&&(u[a>>2]=Qb);b&&(u[b>>2]=Rb)}
+a.q	q	()=>performance.now()
+a.Ja	Ja	()=>X.ah.length
+a.Ga	Ga	(a,b)=>{u[a>>2]=screen.width;u[b>>2]=screen.height}
+a.he	he	a=>T.activeTexture(a)
+a.ge	ge	(a,b)=>{T.attachShader(U[a],dd[b])}
+a.qa	qa	(a,b)=>{T.Uf.beginQueryEXT(a,gd[b])}
+a.fe	fe	(a,b,c)=>{T.bindAttribLocation(U[a],b,c?D(n,c):"")}
+a.ee	ee	(a,b)=>{if(b&&!$c[b]){var c=T.createBuffer();c.name=b;$c[b]=c}34962==a?T.Cg=b:34963==a&&(T.Dg= b);T.bindBuffer(a,$c[b])}
+a.de	de	(a,b)=>{T.bindFramebuffer(a,ad[b])}
+a.ce	ce	(a,b)=>{T.bindRenderbuffer(a,bd[b])}
+a.be	be	(a,b)=>{T.bindTexture(a,cd[b])}
+a.ia	ia	a=>{T.bindVertexArray(ed[a]);a=T.getParameter(34965);T.Dg=a?a.name|0:0}
+a.ae	ae	(a,b,c,d)=>T.blendColor(a,b,c,d)
+a.$d	$d	a=>T.blendEquation(a)
+a._d	_d	(a,b)=>T.blendEquationSeparate(a,b)
+a.Zd	Zd	(a,b)=>T.blendFunc(a,b)
+a.Yd	Yd	(a,b,c,d)=>T.blendFuncSeparate(a,b,c,d)
+a.Xd	Xd	(a,b,c,d)=>{T.bufferData(a,c?n.subarray(c,c+b):b,d)}
+a.Wd	Wd	(a,b,c,d)=>{T.bufferSubData(a,b,n.subarray(d,d+c))}
+a.Ud	Ud	a=> T.checkFramebufferStatus(a)
+a.Td	Td	a=>T.clear(a)
+a.Sd	Sd	(a,b,c,d)=>T.clearColor(a,b,c,d)
+a.Rd	Rd	a=>T.clearDepth(a)
+a.Qd	Qd	a=>T.clearStencil(a)
+a.yb	yb	(a,b)=>{T.Oi.clipControlEXT(a,b)}
+a.Pd	Pd	(a,b,c,d)=>{T.colorMask(!!a,!!b,!!c,!!d)}
+a.Od	Od	a=>{T.compileShader(dd[a])}
+a.Nd	Nd	(a,b,c,d,e,f,g,h)=>{T.compressedTexImage2D(a,b,c,d,e,f,n.subarray(h,h+g))}
+a.Md	Md	(a,b,c,d,e,f,g,h,l)=>{T.compressedTexSubImage2D(a,b,c,d,e,f,g,n.subarray(l,l+h))}
+a.Ld	Ld	(a,b,c,d,e,f,g,h)=>T.copyTexImage2D(a,b,c,d,e,f,g,h)
+a.Jd	Jd	(a,b,c,d,e,f,g,h)=>T.copyTexSubImage2D(a, b,c,d,e,f,g,h)
+a.Id	Id	()=>{var a=md(U),b=T.createProgram();b.name=a;b.eh=b.bh=b.dh=0;b.Ph=1;U[a]=b;return a}
+a.Hd	Hd	a=>{var b=md(dd);dd[b]=T.createShader(a);return b}
+a.Gd	Gd	a=>T.cullFace(a)
+a.Fd	Fd	(a,b)=>{for(var c=0;c<a;c++){var d=u[b+4*c>>2],e=$c[d];e&&(T.deleteBuffer(e),e.name=0,$c[d]=null,d==T.Cg&&(T.Cg=0),d==T.Dg&&(T.Dg=0))}}
+a.Ed	Ed	(a,b)=>{for(var c=0;c<a;++c){var d=u[b+4*c>>2],e=ad[d];e&&(T.deleteFramebuffer(e),e.name=0,ad[d]=null)}}
+a.Dd	Dd	a=>{if(a){var b=U[a];b?(T.deleteProgram(b),b.name=0,U[a]=null):V||=1281}}
+a.ta	ta	(a,b)=>{for(var c=0;c<a;c++){var d=u[b+4*c>>2],e=gd[d];e&&(T.Uf.deleteQueryEXT(e),gd[d]=null)}}
+a.Cd	Cd	(a,b)=>{for(var c=0;c<a;c++){var d=u[b+4*c>>2],e=bd[d];e&&(T.deleteRenderbuffer(e),e.name=0,bd[d]=null)}}
+a.Bd	Bd	a=>{if(a){var b=dd[a];b?(T.deleteShader(b),dd[a]=null):V||=1281}}
+a.Ad	Ad	(a,b)=>{for(var c=0;c<a;c++){var d=u[b+4*c>>2],e=cd[d];e&&(T.deleteTexture(e),e.name=0,cd[d]=null)}}
+a.ha	ha	(a,b)=>{for(var c=0;c<a;c++){var d=u[b+4*c>>2];T.deleteVertexArray(ed[d]);ed[d]=null}}
+a.zd	zd	a=>T.depthFunc(a)
+a.yd	yd	a=>{T.depthMask(!!a)}
+a.xd	xd	(a,b)=>T.depthRange(a,b)
+a.wd	wd	(a,b)=>{T.detachShader(U[a],dd[b])}
+a.vd	vd	a=>T.disable(a)
+a.ud	ud	a=>{W.Zf[a].enabled=!1;T.disableVertexAttribArray(a)}
+a.td	td	(a,b,c)=>{qd(b+c);T.drawArrays(a,b,c);pd&&T.bindBuffer(34962,$c[T.Cg])}
+a.ke	ke	(a,b,c,d)=>{T.drawArraysInstanced(a,b,c,d)}
+a.le	le	(a,b)=>{for(var c=$d[a],d=0;d<a;d++)c[d]=u[b+4*d>>2];T.drawBuffers(c)}
+a.sd	sd	(a,b,c,d)=>{var e=0;if(!T.Dg){var f=1*hd[c-5120]*b;var g=od(f);T.bindBuffer(34963,g);T.bufferSubData(34963,0,n.subarray(d,d+f));if(0<b)for(g=0;g<W.Dh;++g)if(f= W.Zf[g],f.Wg&&f.enabled){switch(c){case 5121:e=Uint8Array;break;case 5123:e=Uint16Array;break;default:V||=1282;return}e=(new e(n.buffer,d,b)).reduce((h,l)=>Math.max(h,l))+1;break}d=0}qd(e);T.drawElements(a,b,c,d);pd&&T.bindBuffer(34962,$c[T
+a.je	je	(a,b,c,d,e)=>{T.drawElementsInstanced(a,b,c,d,e)}
+a.rd	rd	a=>T.enable(a)
+a.qd	qd	a=>{W.Zf[a].enabled=!0;T.enableVertexAttribArray(a)}
+a.pa	pa	a=>{T.Uf.endQueryEXT(a)}
+a.pd	pd	()=>T.finish()
+a.od	od	()=>T.flush()
+a.nd	nd	(a,b,c,d)=>{T.framebufferRenderbuffer(a, b,c,bd[d])}
+a.md	md	(a,b,c,d,e)=>{T.framebufferTexture2D(a,b,c,cd[d],e)}
+a.ld	ld	a=>T.frontFace(a)
+a.kd	kd	(a,b)=>{nd(a,b,"createBuffer",$c)}
+a.id	id	(a,b)=>{nd(a,b,"createFramebuffer",ad)}
+a.ua	ua	(a,b)=>{for(var c=0;c<a;c++){var d=T.Uf.createQueryEXT();if(!d){for(V||=1282;c<a;)u[b+4*c++>>2]=0;break}var e=md(gd);d.name=e;gd[e]=d;u[b+4*c>>2]=e}}
+a.hd	hd	(a,b)=>{nd(a,b,"createRenderbuffer",bd)}
+a.gd	gd	(a,b)=>{nd(a,b,"createTexture",cd)}
+a.ne	ne	(a,b)=>{nd(a,b,"createVertexArray",ed)}
+a.jd	jd	a=>T.generateMipmap(a)
+a.fd	fd	(a,b,c,d,e,f,g)=>ae("getActiveAttrib", a,b,c,d,e,f,g)
+a.ed	ed	(a,b,c,d,e,f,g)=>ae("getActiveUniform",a,b,c,d,e,f,g)
+a.dd	dd	(a,b,c,d)=>{a=T.getAttachedShaders(U[a]);var e=a.length;e>b&&(e=b);u[c>>2]=e;for(b=0;b<e;++b)u[d+4*b>>2]=dd.indexOf(a[b])}
+a.cd	cd	(a,b)=>T.getAttribLocation(U[a],b?D(n,b):"")
+a.bd	bd	(a,b)=>ce(a,b,4)
+a.ad	ad	(a,b,c)=>{c?u[c>>2]=T.getBufferParameter(a,b):V||=1281}
+a.$c	$c	()=>{var a=T.getError()||V;V=0;return a}
+a._c	de	(a,b)=>ce(a,b,2)
+a.Zc	Zc	(a,b,c,d)=>{a=T.getFramebufferAttachmentParameter(a,b,c);if(a instanceof WebGLRenderbuffer||a instanceof WebGLTexture)a=a.name| 0;u[d>>2]=a}
+a.Yc	Yc	(a,b)=>ce(a,b,0)
+a.Wc	Wc	(a,b,c,d)=>{a=T.getProgramInfoLog(U[a]);null===a&&(a="(unknown error)");b=0<b&&d?I(a,n,d,b):0;c&&(u[c>>2]=b)}
+a.Xc	Xc	(a,b,c)=>{if(c)if(a>=Zc)V||=1281;else if(a=U[a],35716==b)a=T.getProgramInfoLog(a),null===a&&(a="(unknown error)"),u[c>>2]=a.length+1;else if(35719==b){if(!a.eh){var d=T.getProgramParameter(a,35718);for(b=0;b<d;++b)a.eh=Math.max(a.eh,T.getActiveUniform(a,b).name.length+1)}u[c>>2]=a.eh}else if(35722==b){if(!a.bh)for(d=T.getProgramParameter(a,35721),b=0;b< d;++b)a.bh=Math.max(a.bh,T.getActiveAttrib(a
+a.ka	ee	(a,b,c)=>{if(c){a=T.Uf.getQueryObjectEXT(gd[a],b);var d;"boolean"==typeof a?d=a?1:0:d=a;be(c,d)}else V||=1281}
+a.ma	fe	(a,b,c)=>{if(c){a=T.Uf.getQueryObjectEXT(gd[a],b);var d;"boolean"==typeof a?d=a?1:0:d=a;u[c>>2]=d}else V||=1281}
+a.ja	ee	(a,b,c)=>{if(c){a=T.Uf.getQueryObjectEXT(gd[a],b);var d;"boolean"==typeof a?d=a?1:0:d=a;be(c,d)}else V||=1281}
+a.la	fe	(a,b,c)=>{if(c){a=T.Uf.getQueryObjectEXT(gd[a],b);var d;"boolean"==typeof a?d=a?1:0:d=a;u[c>>2]=d}else V||=1281}
+a.na	na	(a,b,c)=>{c?u[c>>2]=T.Uf.getQueryEXT(a,b):V||=1281}
+a.Vc	Vc	(a,b,c)=>{c?u[c>>2]=T.getRenderbufferParameter(a,b):V||=1281}
+a.Tc	Tc	(a,b,c,d)=>{a=T.getShaderInfoLog(dd[a]);null===a&&(a="(unknown error)"); b=0<b&&d?I(a,n,d,b):0;c&&(u[c>>2]=b)}
+a.Sc	Sc	(a,b,c,d)=>{a=T.getShaderPrecisionFormat(a,b);u[c>>2]=a.rangeMin;u[c+4>>2]=a.rangeMax;u[d>>2]=a.precision}
+a.Rc	Rc	(a,b,c,d)=>{if(a=T.getShaderSource(dd[a]))b=0<b&&d?I(a,n,d,b):0,c&&(u[c>>2]=b)}
+a.Uc	Uc	(a,b,c)=>{c?35716==b?(a=T.getShaderInfoLog(dd[a]),null===a&&(a="(unknown error)"),u[c>>2]=a?a.length+1:0):35720==b?(a=T.getShaderSource(dd[a]),u[c>>2]=a?a.length+1:0):u[c>>2]=T.getShaderParameter(dd[a],b):V||=1281}
+a.Qc	Qc	a=>{var b=jd[a];if(!b){switch(a){case 7939:b=he(ie().join(" ")); break;case 7936:case 7937:case 37445:case 37446:(b=T.getParameter(a))||(V||=1280);b=b?he(b):0;break;case 7938:b=he(`OpenGL ES 2.0 (${T.getParameter(7938)})`);break;case 35724:b=T.getParameter(35724);var c=b.match(/^WebGL GLSL ES ([0-9]\.[0-9][0-9]?)(?:$| .*)/);null!==c&&(3==c[1].length&&(c[1]+="0"),b=`OpenGL ES GLSL ES ${c[1]} (${b})
+a.Pc	Pc	(a,b,c)=>{c?x[c>>2]=T.getTexParameter(a,b):V||=1281}
+a.Oc	Oc	(a,b,c)=>{c?u[c>>2]=T.getTexParameter(a,b):V||=1281}
+a.Lc	Lc	(a, b)=>{b=b?D(n,b):"";if(a=U[a]){ke(a);var c=a.Rg,d=0,e=b,f=je(b);0<f&&(d=parseInt(b.slice(f+1))>>>0,e=b.slice(0,f));if((e=a.ui[e])&&d<e[0]&&(d+=e[1],c[d]=c[d]||T.getUniformLocation(a,b)))return d}else V||=1281;return-1}
+a.Nc	Nc	(a,b,c)=>{le(a,b,c,2)}
+a.Mc	Mc	(a,b,c)=>{le(a,b,c,0)}
+a.Ic	Ic	(a,b,c)=>{c?(W.Zf[a].enabled&&k("glGetVertexAttribPointer on client-side array: not supported, bad data returned"),u[c>>2]=T.getVertexAttribOffset(a,b)):V||=1281}
+a.Kc	Kc	(a,b,c)=>{me(a,b,c,2)}
+a.Jc	Jc	(a,b,c)=>{me(a,b,c,5)}
+a.Hc	Hc	(a,b)=>T.hint(a, b)
+a.Gc	Gc	a=>(a=$c[a])?T.isBuffer(a):0
+a.Fc	Fc	a=>T.isEnabled(a)
+a.Ec	Ec	a=>(a=ad[a])?T.isFramebuffer(a):0
+a.Dc	Dc	a=>(a=U[a])?T.isProgram(a):0
+a.sa	sa	a=>(a=gd[a])?T.Uf.isQueryEXT(a):0
+a.Cc	Cc	a=>(a=bd[a])?T.isRenderbuffer(a):0
+a.Bc	Bc	a=>(a=dd[a])?T.isShader(a):0
+a.Ac	Ac	a=>(a=cd[a])?T.isTexture(a):0
+a.me	me	a=>(a=ed[a])?T.isVertexArray(a):0
+a.zc	zc	a=>T.lineWidth(a)
+a.yc	yc	a=>{a=U[a];T.linkProgram(a);a.Rg=0;a.ui={}}
+a.xc	xc	(a,b)=>{3317==a?kd=b:3314==a&&(ld=b);T.pixelStorei(a,b)}
+a.xb	xb	(a,b)=>{T.sj.polygonModeWEBGL(a,b)}
+a.wc	wc	(a,b)=>T.polygonOffset(a,b)
+a.zb	zb	(a, b,c)=>{T.Pi.polygonOffsetClampEXT(a,b,c)}
+a.oa	oa	(a,b)=>{T.Uf.queryCounterEXT(gd[a],b)}
+a.vc	vc	(a,b,c,d,e,f,g)=>{(g=ne(f,e,c,d,g))?T.readPixels(a,b,c,d,e,f,g):V||=1280}
+a.uc	uc	()=>{}
+a.tc	tc	(a,b,c,d)=>T.renderbufferStorage(a,b,c,d)
+a.sc	sc	(a,b)=>{T.sampleCoverage(a,!!b)}
+a.rc	rc	(a,b,c,d)=>T.scissor(a,b,c,d)
+a.qc	qc	()=>{V||=1280}
+a.pc	pc	(a,b,c,d)=>{for(var e="",f=0;f<b;++f)e+=Fb(w[c+4*f>>2],d?w[d+4*f>>2]:void 0);T.shaderSource(dd[a],e)}
+a.oc	oe	(a,b,c)=>T.stencilFunc(a,b,c)
+a.nc	nc	(a,b,c,d)=>T.stencilFuncSeparate(a,b,c,d)
+a.mc	mc	a=>T.stencilMask(a)
+a.lc	lc	(a,b)=>T.stencilMaskSeparate(a, b)
+a.kc	pe	(a,b,c)=>T.stencilOp(a,b,c)
+a.jc	jc	(a,b,c,d)=>T.stencilOpSeparate(a,b,c,d)
+a.ic	ic	(a,b,c,d,e,f,g,h,l)=>{l=l?ne(h,g,d,e,l):null;T.texImage2D(a,b,c,d,e,f,g,h,l)}
+a.hc	hc	(a,b,c)=>T.texParameterf(a,b,c)
+a.gc	gc	(a,b,c)=>{T.texParameterf(a,b,x[c>>2])}
+a.fc	fc	(a,b,c)=>T.texParameteri(a,b,c)
+a.ec	ec	(a,b,c)=>{T.texParameteri(a,b,u[c>>2])}
+a.dc	dc	(a,b,c,d,e,f,g,h,l)=>{l=l?ne(h,g,e,f,l):null;T.texSubImage2D(a,b,c,d,e,f,g,h,l)}
+a.cc	cc	(a,b)=>{T.uniform1f(Z(a),b)}
+a.bc	bc	(a,b,c)=>{if(288>=b)for(var d=qe[b],e=0;e<b;++e)d[e]=x[c+4*e>>2];else d=x.subarray(c>>2,c+4*b>> 2);T.uniform1fv(Z(a),d)}
+a.ac	ac	(a,b)=>{T.uniform1i(Z(a),b)}
+a.$b	$b	(a,b,c)=>{if(288>=b)for(var d=re[b],e=0;e<b;++e)d[e]=u[c+4*e>>2];else d=u.subarray(c>>2,c+4*b>>2);T.uniform1iv(Z(a),d)}
+a._b	_b	(a,b,c)=>{T.uniform2f(Z(a),b,c)}
+a.Zb	Zb	(a,b,c)=>{if(144>=b){b*=2;for(var d=qe[b],e=0;e<b;e+=2)d[e]=x[c+4*e>>2],d[e+1]=x[c+(4*e+4)>>2]}else d=x.subarray(c>>2,c+8*b>>2);T.uniform2fv(Z(a),d)}
+a.Yb	Yb	(a,b,c)=>{T.uniform2i(Z(a),b,c)}
+a.Xb	Xb	(a,b,c)=>{if(144>=b){b*=2;for(var d=re[b],e=0;e<b;e+=2)d[e]=u[c+4*e>>2],d[e+1]=u[c+(4*e+4)>>2]}else d= u.subarray(c>>2,c+8*b>>2);T.uniform2iv(Z(a),d)}
+a.Wb	Wb	(a,b,c,d)=>{T.uniform3f(Z(a),b,c,d)}
+a.Vb	Vb	(a,b,c)=>{if(96>=b){b*=3;for(var d=qe[b],e=0;e<b;e+=3)d[e]=x[c+4*e>>2],d[e+1]=x[c+(4*e+4)>>2],d[e+2]=x[c+(4*e+8)>>2]}else d=x.subarray(c>>2,c+12*b>>2);T.uniform3fv(Z(a),d)}
+a.Ub	Ub	(a,b,c,d)=>{T.uniform3i(Z(a),b,c,d)}
+a.Tb	Tb	(a,b,c)=>{if(96>=b){b*=3;for(var d=re[b],e=0;e<b;e+=3)d[e]=u[c+4*e>>2],d[e+1]=u[c+(4*e+4)>>2],d[e+2]=u[c+(4*e+8)>>2]}else d=u.subarray(c>>2,c+12*b>>2);T.uniform3iv(Z(a),d)}
+a.Sb	Sb	(a,b,c,d,e)=>{T.uniform4f(Z(a), b,c,d,e)}
+a.Rb	Rb	(a,b,c)=>{if(72>=b){var d=qe[4*b],e=x;c>>=2;b*=4;for(var f=0;f<b;f+=4){var g=c+f;d[f]=e[g];d[f+1]=e[g+1];d[f+2]=e[g+2];d[f+3]=e[g+3]}}else d=x.subarray(c>>2,c+16*b>>2);T.uniform4fv(Z(a),d)}
+a.Qb	Qb	(a,b,c,d,e)=>{T.uniform4i(Z(a),b,c,d,e)}
+a.Pb	Pb	(a,b,c)=>{if(72>=b){b*=4;for(var d=re[b],e=0;e<b;e+=4)d[e]=u[c+4*e>>2],d[e+1]=u[c+(4*e+4)>>2],d[e+2]=u[c+(4*e+8)>>2],d[e+3]=u[c+(4*e+12)>>2]}else d=u.subarray(c>>2,c+16*b>>2);T.uniform4iv(Z(a),d)}
+a.Ob	Ob	(a,b,c,d)=>{if(72>=b){b*=4;for(var e=qe[b],f=0;f<b;f+= 4)e[f]=x[d+4*f>>2],e[f+1]=x[d+(4*f+4)>>2],e[f+2]=x[d+(4*f+8)>>2],e[f+3]=x[d+(4*f+12)>>2]}else e=x.subarray(d>>2,d+16*b>>2);T.uniformMatrix2fv(Z(a),!!c,e)}
+a.Nb	Nb	(a,b,c,d)=>{if(32>=b){b*=9;for(var e=qe[b],f=0;f<b;f+=9)e[f]=x[d+4*f>>2],e[f+1]=x[d+(4*f+4)>>2],e[f+2]=x[d+(4*f+8)>>2],e[f+3]=x[d+(4*f+12)>>2],e[f+4]=x[d+(4*f+16)>>2],e[f+5]=x[d+(4*f+20)>>2],e[f+6]=x[d+(4*f+24)>>2],e[f+7]=x[d+(4*f+28)>>2],e[f+8]=x[d+(4*f+32)>>2]}else e=x.subarray(d>>2,d+36*b>>2);T.uniformMatrix3fv(Z(a),!!c,e)}
+a.Mb	Mb	(a,b,c,d)=> {if(18>=b){var e=qe[16*b],f=x;d>>=2;b*=16;for(var g=0;g<b;g+=16){var h=d+g;e[g]=f[h];e[g+1]=f[h+1];e[g+2]=f[h+2];e[g+3]=f[h+3];e[g+4]=f[h+4];e[g+5]=f[h+5];e[g+6]=f[h+6];e[g+7]=f[h+7];e[g+8]=f[h+8];e[g+9]=f[h+9];e[g+10]=f[h+10];e[g+11]=f[h+11];e[g+12]=f[h+12];e[g+13]=f[h+13];e[g+14]=f[h+14];e[g+15]=f[h+15]}}else e=x.subarray(d>>2,d+64*b>>2);T.uniformMatrix4fv(Z(a),!!c,e)}
+a.Lb	Lb	a=>{a=U[a];T.useProgram(a);T.Ii=a}
+a.Kb	Kb	a=>{T.validateProgram(U[a])}
+a.Jb	Jb	(a,b)=>T.vertexAttrib1f(a,b)
+a.Ib	Ib	(a,b)=>{T.vertexAttrib1f(a, x[b>>2])}
+a.Hb	Hb	(a,b,c)=>T.vertexAttrib2f(a,b,c)
+a.Gb	Gb	(a,b)=>{T.vertexAttrib2f(a,x[b>>2],x[b+4>>2])}
+a.Fb	Fb	(a,b,c,d)=>T.vertexAttrib3f(a,b,c,d)
+a.Eb	Eb	(a,b)=>{T.vertexAttrib3f(a,x[b>>2],x[b+4>>2],x[b+8>>2])}
+a.Db	Db	(a,b,c,d,e)=>T.vertexAttrib4f(a,b,c,d,e)
+a.Cb	Cb	(a,b)=>{T.vertexAttrib4f(a,x[b>>2],x[b+4>>2],x[b+8>>2],x[b+12>>2])}
+a.ie	ie	(a,b)=>{T.vertexAttribDivisor(a,b)}
+a.Bb	Bb	(a,b,c,d,e,f)=>{var g=W.Zf[a];T.Cg?(g.Wg=!1,T.vertexAttribPointer(a,b,c,!!d,e,f)):(g.size=b,g.type=c,g.oi=d,g.stride=e,g.fh=f,g.Wg=!0,g.vi=function(h, l,p,t,r,v){this.vertexAttribPointer(h,l,p,t,r,v)})}
+a.Ab	Ab	(a,b,c,d)=>T.viewport(a,b,c,d)
+a.x	x	()=>1
+a.xa	xa	()=>!ba
+a.za	za	(a,b,c)=>se(a,{Lh:u[c>>2],nh:u[c+4>>2],Qi:u[c+8>>2],Li:b,Vg:u[c+12>>2],Yh:u[c+16>>2]})
+a.X	X	(a,b)=>{a=Id(a);return a?a.requestPointerLock?Cd()?Xd(a):b?(Ad(Xd,2,[a]),1):-2:-1:-4}
+a.db	db	()=>{y("OOM")}
+a.$	te	()=>{try{if(navigator.getGamepads)return(X.ah=navigator.getGamepads())?0:-1}catch(a){navigator.getGamepads=null}return-1}
+a.M	M	(a,b,c)=>"undefined"==typeof onbeforeunload?-1:1!==c?-5:ue(a,b)
+a.U	U	(a,b,c,d)=>ve(a,b,c,d,12,"blur")
+a.s	Pd	(a,b,c)=>{a=Id(a);if(!a)return-4;a.width=b;a.height=c;return 0}
+a.v	v	(a,b,c)=>{a=Id(a);if(!a)return-4;a.style.width=b+"px";a.style.height=c+"px";return 0}
+a.V	V	(a, b,c,d)=>ve(a,b,c,d,13,"focus")
+a.G	G	(a,b,c,d)=>{if(!X.fullscreenEnabled())return-1;a=Id(a);if(!a)return-4;we(a,b,c,d,"webkitfullscreenchange");return we(a,b,c,d,"fullscreenchange")}
+a.A	A	(a,b,c)=>te()?-1:xe(a,b,c,26,"gamepadconnected")
+a.z	z	(a,b,c)=>te()?-1:xe(a,b,c,27,"gamepaddisconnected")
+a.Q	Q	(a,b,c,d)=>ye(a,b,c,d,2,"keydown")
+a.O	O	(a,b,c,d)=>ye(a,b,c,d,1,"keypress")
+a.P	P	(a,b,c,d)=>ye(a,b,c,d,3,"keyup")
+a.Da	Da	(a,b,c,d)=>{hc(()=>dynCall_vi(a,b),c,d,b)}
+a.y	Zb	(a,b)=>{Qb=a;Rb=b;if(!Sb)return 1;Tb||=!0;if(0==a)Ub=function(){setTimeout(Vb,Math.max(0,Wb+b-performance.now())|0)};else if(1==a)Ub=function(){Xb(Vb)}; else{if(!Yb)if(globalThis.setImmediate)Yb=setImmediate;else{var c=[];addEventListener("message",d=>{if("setimmediate"===d.data||"setimmediate"===d.data.target)d.stopPropagation(),c.shift()()},!0);Yb=d=>{c.push(d);if(ba){let e;(e=Module).setImmedia
+a.R	R	(a,b,c)=>window.screen&&screen.orientation?ze(a,b,c):-1
+a.T	T	(a,b,c,d)=>document.body?.requestPointerLock?(a=Id(a))?Ae(a,b,c,d):-4:-1
+a.F	F	(a,b,c,d)=>Be(a,b,c,d)
+a.N	N	(a,b,c)=>Hd[1]?Ce(a,b,c):-4
+a.S	S	(a,b,c,d)=>(a=Id(a))?"undefined"!=typeof a.onwheel?De(a,b,c,d):-1:-4
+a.Ba	Ba	a=>document.title=a?D(n,a):""
+a.g	g	function(a){return nf(()=>new Promise(b=>setTimeout(b,a)))}
+a.wa	wa	function(a,b,c,d,e){function f(E){v?E():Pb(E)}var g=a+108,h=w[g+36>>2],l=w[g+40>>2],p=w[g+44>>2],t=w[g+48>>2],r=w[g+52>>2],v=!!(r&64),B=E=>{f(()=>{h?dynCall_vi(h,E):b?.(E)})},C=E=>{f(()=>{p?dynCall_vi(p, E):d?.(E)})},G=E=>{f(()=>{l?dynCall_vi(l,E):c?.(E)})},H=E=>{f(()=>{t?dynCall_vi(t,E):e?.(E)})},O=E=>{Je(E,B,G,C,H)},R=(E,ka)=>{Le(E,ka.response,Ba=>{f(()=>{h?dynCall_vi(h,Ba):b?.(Ba)})},Ba=>{f(()=
+a.Ha	Ha	(a,b)=>{var c=b>>2;b={alpha:!!m[b+ 0],depth:!!m[b+1],stencil:!!m[b+2],antialias:!!m[b+3],premultipliedAlpha:!!m[b+4],preserveDrawingBuffer:!!m[b+5],powerPreference:Oe[u[c+2]],failIfMajorPerformanceCaveat:!!m[b+12],mi:u[c+4],gj:u[c+5],ei:m[b+24],Ni:m[b+25],ek:u[c+7],ik:m[b+32]};a=Id(a);return!a||b.Ni?0:sd(a,b)}
+a.Y	Y	a=>{W==a&&(W=0);ud(a)}
+a.Z	Z	a=>td(a)?0:-5
+a.vb	vb	(a,b)=>{var c=0,d=0,e;for(e of Re()){var f=b+c;w[a+d>>2]=f;c+=I(e,n,f,Infinity)+1;d+=4}return 0}
+a.wb	wb	(a,b)=>{var c=Re();w[a>>2]=c.length;a=0;for(var d of c)a+=Ta(d)+1;w[b>>2]=a;return 0}
+a.ea	ea	function(a){try{var b=tb(a);z.close(b);return 0}catch(c){if("undefined"==typeof z||"ErrnoError"!==c.name)throw c;return c.sf}}
+a.nb	nb	function(a,b,c,d){try{a:{var e=tb(a);a=b;for(var f,g=b=0;g<c;g++){var h=w[a>>2],l=w[a+4>>2];a+=8;var p=z.read(e,m,h,l,f);if(0>p){var t=-1;break a}b+=p;if(p<l)break;"undefined"!=typeof f&&(f+=p)}t=b}w[d>>2]=t;return 0}catch(r){if("undefined"==typeof z||"ErrnoError"!==r.name)throw r;return r.sf}}
+a.gb	gb	function(a,b,c,d){b=-9007199254740992>b||9007199254740992<b?NaN:Number(b); try{if(isNaN(b))return 61;var e=tb(a);z.yf(e,b,c);qa[d>>3]=BigInt(e.position);e.vh&&0===b&&0===c&&(e.vh=null);return 0}catch(f){if("undefined"==typeof z||"ErrnoError"!==f.name)throw f;return f.sf}}
+a.mb	mb	function(a,b,c,d){try{a:{var e=tb(a);a=b;for(var f,g=b=0;g<c;g++){var h=w[a>>2],l=w[a+4>>2];a+=8;var p=z.write(e,m,h,l,f);if(0>p){var t=-1;break a}b+=p;if(p<l)break;"undefined"!=typeof f&&(f+=p)}t=b}w[d>>2]=t;return 0}catch(r){if("undefined"==typeof z||"ErrnoError"!==r.name)throw r;return r.sf}}
+a.Na	de	(a,b)=>ce(a,b,2)
+a.Pa	oe	(a,b,c)=>T.stencilFunc(a,b,c)
+a.Oa	pe	(a,b,c)=>T.stencilOp(a,b,c)
+a._a	Of	function Of(a){var b=Md();try{return Mf(a)}catch(c){Nd(b);if(c!==c+0)throw c;Jf(1,0)}}
+a.ca	Pf	function Pf(a,b){var c=Md();try{return Kf(a,b)}catch(d){Nd(c);if(d!==d+0)throw d;Jf(1,0)}}
+a.f	Qf	function Qf(a,b,c){var d=Md();try{return dynCall_iii(a,b,c)}catch(e){Nd(d);if(e!==e+0)throw e;Jf(1,0)}}
+a.C	Rf	function Rf(a,b,c,d){var e=Md();try{return Sd(a,b,c,d)}catch(f){Nd(e);if(f!==f+0)throw f;Jf(1,0)}}
+a.j	Sf	function Sf(a,b){var c=Md();try{dynCall_vi(a,b)}catch(d){Nd(c);if(d!==d+0)throw d;Jf(1,0)}}
+a.a	Tf	function Tf(a,b,c){var d=Md();try{dynCall_vii(a,b,c)}catch(e){Nd(d);if(e!==e+0)throw e;Jf(1,0)}}
+a.b	Uf	function Uf(a,b,c,d){var e=Md();try{Lf(a,b,c,d)}catch(f){Nd(e);if(f!==f+0)throw f;Jf(1,0)}}
+a.ab	Nb	a=>{na=a;Fa||0<Ib||(Module.onExit?.(a),ma=!0);throw new va(a);}
