@@ -35,21 +35,28 @@ void w2c_a_J(struct w2c_a* env, u32 n, u32 out) { alGenBuffers(n, (ALuint*)RT_PT
 void w2c_a_K(struct w2c_a* env, u32 n, u32 out) { alGenSources(n, (ALuint*)RT_PTR(out)); }
 void w2c_a_fa(struct w2c_a* env, u32 n, u32 ids) { alDeleteBuffers(n, (ALuint*)RT_PTR(ids)); }
 void w2c_a_ga(struct w2c_a* env, u32 n, u32 ids) { alDeleteSources(n, (ALuint*)RT_PTR(ids)); }
-// The game streams voice/music even when voice*.bin / strbgm.vas are missing, and then
-// hands over a range that runs past the end of wasm memory. The browser glue reads such
-// bytes as silence; natively it is a data abort, so the range is clamped to memory.
+// The game streams voice/music even when voice*.bin / strbgm.vas are missing: the stream
+// header is then read from uninitialised memory (SdStrAL.cpp, SdStrReadHeadWait), so
+// format, rate and range are garbage and may run past the end of wasm memory (a data
+// abort natively). Such buffers are submitted empty, which plays as silence.
+static int rt_al_buffer_valid(u32 fmt, u32 data, u32 size, u32 freq) {
+  if (fmt != AL_FORMAT_MONO8 && fmt != AL_FORMAT_MONO16 &&
+      fmt != AL_FORMAT_STEREO8 && fmt != AL_FORMAT_STEREO16)
+    return 0;
+  if (freq < 4000 || freq > 96000) return 0;
+  return (uint64_t)data + size <= RT_MEMORY->size;
+}
+
 void w2c_a_t(struct w2c_a* env, u32 buf, u32 fmt, u32 data, u32 size, u32 freq) {
-  uint64_t mem_size = RT_MEMORY->size;
-  if (data >= mem_size) {
-    RT_LOG("[al] alBufferData(%u) out of range: data=%u size=%u\n", buf, data, size);
-    size = 0;
-  } else if ((uint64_t)data + size > mem_size) {
-    u32 frame = (fmt == AL_FORMAT_STEREO16) ? 4 : (fmt == AL_FORMAT_MONO8) ? 1 : 2;
-    u32 clamped = (u32)(mem_size - data) / frame * frame;
-    RT_LOG("[al] alBufferData(%u) clamped %u -> %u bytes\n", buf, size, clamped);
-    size = clamped;
+  if (!rt_al_buffer_valid(fmt, data, size, freq)) {
+    static int logged = 0;
+    if (logged++ < 20)
+      RT_LOG("[al] alBufferData(%u) dropped: fmt=0x%x data=%u size=%u freq=%u\n", buf, fmt, data, size, freq);
+    static const short silence[2] = {0, 0};
+    alBufferData(buf, AL_FORMAT_MONO16, silence, sizeof silence, 22050);
+    return;
   }
-  alBufferData(buf, fmt, size ? RT_PTR(data) : NULL, size, freq);
+  alBufferData(buf, fmt, RT_PTR(data), size, freq);
 }
 void w2c_a_r(struct w2c_a* env, u32 src) { alSourcePlay(src); }
 void w2c_a_D(struct w2c_a* env, u32 src) { alSourcePause(src); }
